@@ -1,4 +1,5 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
@@ -17,26 +18,39 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 const Layout = (props: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
-    <header className="w-full max-w-7xl mx-auto p-10 border-b border-gray-100">
-      <nav>
-        <ul className="flex gap-16 text-lg font-semibold">
-          <li>
-            <NavLink to="/" className={navLinkClass}>
-              home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/blog" className={navLinkClass}>
-              blog
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className={navLinkClass}>
-              about
-            </NavLink>
-          </li>
-        </ul>
-      </nav>
+    <header className="w-full max-w-7xl mx-auto p-10 flex text-lg">
+      <div className="flex-1 flex gap-16">
+        <Link to="/" className="font-bold">
+          Hung Nguyen
+        </Link>
+        <nav>
+          <ul className="flex gap-16 font-semibold">
+            <li>
+              <NavLink to="/latest" className={navLinkClass}>
+                Latest
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/blog" className={navLinkClass}>
+                Posts
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/goodies" className={navLinkClass}>
+                Goodies
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/courses" className={navLinkClass}>
+                Courses
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <button>Switch Theme</button>
+      </div>
     </header>
     <main className="w-full max-w-7xl mx-auto flex-1 flex">
       {props.children}
@@ -53,10 +67,10 @@ const Layout = (props: { children: ReactNode }) => (
 );
 
 export const meta: MetaFunction = () => [
-  { title: "Remix 🤝 MDX" },
+  { title: "nnhjs.dev" },
   {
     name: "description",
-    content: "Template showing off Remix's new MDX capabilities",
+    content: "Welcome to nnhjs-blog, a blog about web development and more!",
   },
 ];
 
@@ -69,7 +83,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="overflow-y-scroll">
         <Layout>
           <Outlet />
         </Layout>

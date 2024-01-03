@@ -5,7 +5,7 @@ import { getPosts } from "~/.server/posts";
 import { Post } from "~/components/post";
 
 export const meta: MetaFunction = () => [
-  { title: "Blog" },
+  { title: "Blog | Hung Nguyen" },
   {
     name: "description",
     content: "Welcome to nnhjs-blog, a blog about web development and more!",
