@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/*body {*/
-/*  @apply text-gray-900;*/
-/*}*/
+body {
+  @apply text-gray-900;
+}
 
-/*main a:not(nav a) {*/
-/*  @apply underline decoration-cyan-700 hover:decoration-cyan-900;*/
-/*}*/
+main a:not(nav a) {
+  @apply hover:text-cyan-600;
+}

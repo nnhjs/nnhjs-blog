@@ -20,7 +20,7 @@ const Layout = (props: { children: ReactNode }) => (
   <div className="min-h-screen flex flex-col">
     <header className="w-full max-w-7xl mx-auto p-10 flex text-lg">
       <div className="flex-1 flex gap-16">
-        <Link to="/" className="font-bold">
+        <Link to="/" className="font-bold text-2xl text-cyan-700">
           Hung Nguyen
         </Link>
         <nav>
