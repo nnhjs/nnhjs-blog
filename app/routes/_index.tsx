@@ -3,6 +3,7 @@ import { MetaFunction, useLoaderData } from "@remix-run/react";
 
 import { getPosts } from "~/.server/posts";
 import { Post } from "~/components/post";
+import Hi from "~/assets/hi.png";
 
 export const meta: MetaFunction = () => [
   { title: "Home" },
@@ -47,7 +48,7 @@ export default function Index() {
       </div>
       <div className="hidden sm:block">
         <img
-          src="app/assets/hi.png"
+          src={Hi}
           alt="Abstract sculpture with different colorful shapes"
         />
       </div>
