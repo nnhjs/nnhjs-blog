@@ -1,8 +1,16 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { MetaFunction, useLoaderData } from "@remix-run/react";
 
 import { getPosts } from "~/.server/posts";
 import { Post } from "~/components/post";
+
+export const meta: MetaFunction = () => [
+  { title: "Blog" },
+  {
+    name: "description",
+    content: "Welcome to nnhjs-blog, a blog about web development and more!",
+  },
+];
 
 export const loader = () => json(getPosts());
 

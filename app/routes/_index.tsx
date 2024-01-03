@@ -1,8 +1,16 @@
 import { json } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import { MetaFunction, useLoaderData } from "@remix-run/react";
 
 import { getPosts } from "~/.server/posts";
 import { Post } from "~/components/post";
+
+export const meta: MetaFunction = () => [
+  { title: "Home" },
+  {
+    name: "description",
+    content: "Welcome to nnhjs-blog, a blog about web development and more!",
+  },
+];
 
 export const loader = () => {
   const posts = getPosts();
@@ -39,7 +47,7 @@ export default function Index() {
       </div>
       <div className="hidden sm:block">
         <img
-          src="/hero.png"
+          src="app/assets/hi.png"
           alt="Abstract sculpture with different colorful shapes"
         />
       </div>

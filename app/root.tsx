@@ -43,11 +43,10 @@ const Layout = (props: { children: ReactNode }) => (
     </main>
     <footer className="w-full max-w-7xl mx-auto p-10 flex justify-center">
       <span className="text-sm text-gray-500">
-        Illustrations by{" "}
-        <a href="https://icons8.com/illustrations/author/zD2oqC8lLBBA">
-          Icons 8
-        </a>{" "}
-        from <a href="https://icons8.com/illustrations">Ouch!</a>
+        Made with 💙 by{" "}
+        <a href="https://twitter.com/nnhungjs" target="_blank" rel="noreferrer">
+          @nnhjs
+        </a>
       </span>
     </footer>
   </div>
